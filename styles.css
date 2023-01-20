@@ -1,0 +1,74 @@
+.hidden{
+  display: none;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+}
+
+#container{
+  height: 100%;
+}
+
+
+/* HOME PAGE */
+
+#home-page{
+  height: 125vh;
+}
+
+h1{
+  position: sticky;
+  top: 100px;
+  margin: 46vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+ul{
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+li{
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  height: 70px;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+img{
+  opacity: 0;
+  height: 400px;
+  width: 400px;
+  transition: opacity 1s ease;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px 2px lightblue;
+}
+
+li:hover > img{
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
+
+li:hover > button{
+  transform: translateY(500px);
+  transition: 0.5s;
+}
+
+li:not(hover) > button{
+  transform: translateY(0px);
+  transition: 0.5s;
+}
