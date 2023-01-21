@@ -15,22 +15,79 @@
       <ul>
         <li>
           <button class="" id="history">Istorie</button>
-          <img id="history" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-EQiF-EGMlgk%2FUwfY1fxx1pI%2FAAAAAAAAcXU%2Fyhr-jB5OOfo%2Fs1600%2FOld%2BComputer.jpg&f=1&nofb=1&ipt=82bd14a1f4c0169966188a8a9aeb65a7f602d10d8083ee09f3de5a1d17955fc8&ipo=images" alt="">
+          <img class="section-image" id="history" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-EQiF-EGMlgk%2FUwfY1fxx1pI%2FAAAAAAAAcXU%2Fyhr-jB5OOfo%2Fs1600%2FOld%2BComputer.jpg&f=1&nofb=1&ipt=82bd14a1f4c0169966188a8a9aeb65a7f602d10d8083ee09f3de5a1d17955fc8&ipo=images" alt="">
         </li>
         <li>
           <button class="" id="components">Componente</button>
-          <img id="componenets" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbuildpremiumpc.com%2Fwp-content%2Fuploads%2F2021%2F04%2FPC-Parts-List-and-Explanation-768x743.jpg&f=1&nofb=1&ipt=3fd5a3f1192ebc8194f99ae99bd42debabc693e2b330e8a36bea67616a3779ef&ipo=images" alt="">
+          <img class="section-image" id="components" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbuildpremiumpc.com%2Fwp-content%2Fuploads%2F2021%2F04%2FPC-Parts-List-and-Explanation-768x743.jpg&f=1&nofb=1&ipt=3fd5a3f1192ebc8194f99ae99bd42debabc693e2b330e8a36bea67616a3779ef&ipo=images" alt="">
         </li>
         <li>
           <button class="" id="future">Viitor</button>
-          <img id="future" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Foxon.bcs.org%2Fwp-content%2Fuploads%2F2020%2F09%2FQuantumComputing.jpg%3Fssl%3D1&f=1&nofb=1&ipt=467dca7611785c8e93cd0d69d863e7f44bd0749aa64eb0cd81033210bf910711&ipo=images" alt="">
+          <img class="section-image" id="future" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Foxon.bcs.org%2Fwp-content%2Fuploads%2F2020%2F09%2FQuantumComputing.jpg%3Fssl%3D1&f=1&nofb=1&ipt=467dca7611785c8e93cd0d69d863e7f44bd0749aa64eb0cd81033210bf910711&ipo=images" alt="">
         </li>
       </ul>
     </div>
 
     <div id="history-page">
       <h1>ISTORIE</h1>
+      <div id="history-container">
+        <div id="history-content"></div>
+        <div id="year-nav-container">
+          <div id="range-container">
+            <div>1800</div>
+            <input type="range" min="1800" max="2000" value="1822" id="slider" onchange="a()">
+            <div>2020</div>
+          </div>
+          <div id="buttons-container">
+            <button id="left" onclick="left()"><</button>
+            <div id="current-year">1822</div>
+            <button id="right" onclick="right()">></button>
+          </div>
+        </div>
+      </div>
     </div>
+    
+
+    <!-- history page sections -->
+    <div class="hidden" id="history-sections">
+      <div id="y1822">
+        <h2>1822</h2>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.britannica.com%2F31%2F172531-050-E009D42C%2Fportion-Charles-Babbage-Analytical-Engine-death-mill-1871.jpg&f=1&nofb=1&ipt=f91da7df5c87c0dc8e8d480910dbb7b339da5bbb0b0855a1350adbf4981a10cb&ipo=images" alt="">
+        <p>Analytical Engine este un calculator mecanic general-propus proiectat de Charles Babbage în 1822. A fost conceput pentru a efectua calcule matematice complexe, inclusiv operații aritmetice, trigonometrie și logaritmice. Deși nu a fost niciodată construit în întregime, proiectul a avut un impact major asupra dezvoltării calculatoarelor.</p>
+      </div>
+      <div id="y1890">
+        <h2>1890</h2>
+        <img src="" alt="">
+        <p>Mașina inventată de Herman Hollerith în 1890 a fost utilizată pentru a procesa datele din recensământul SUA. A folosit cartele cu găuri pentru a înregistra informațiile și a accelerat semnificativ procesarea datelor. Acest sistem a fost utilizat pentru recensăminte ulterioare și a devenit baza pentru compania IBM.</p>
+      </div>
+       <div id="y1940">
+        <h2>1940</h2>
+        <img src="" alt="">
+        <p>Atanasoff-Berry Computer (ABC) a fost inventat de John Atanasoff și Clifford Berry în 1940 și considerat primul calculator electronic din istorie. Acesta a introdus o serie de inovații tehnologice importante, cum ar fi utilizarea unui sistem de stocare bazat pe condensatoare pentru a înlocui mecanismele de memorie cu discuri sau benzi utilizate în calculatoarele mecanice anterioare și utilizarea unui sistem de calcul paralel.</p>
+      </div>
+      <div id="y1946">
+        <h2>1946</h2>
+        <img src="" alt="">
+        <p>Electronic Numerical Integrator And Computer (ENIAC) a fost prezentat în 1946, primul calculator electronic general-scop. Acesta a fost construit pentru a efectua calcule complexe pentru armata SUA, dar a fost utilizat ulterior în diverse domenii, cum ar fi cercetarea științifică și inginerie. ENIAC a fost un pas important în evoluția calculatoarelor electronice.</p>
+      </div>
+       <div id="y1951">
+        <h2>1951</h2>
+        <p>UNIVAC I (UNIVersal Automatic Computer I) a devenit primul calculator comercial disponibil în 1951. Acest computer a revolutionat industria și a făcut posibil ca calculatoarele să fie utilizate în afaceri și guvern.</p>
+      </div>
+      <div id="y1964">
+        <h2>1964</h2>
+        <p>IBM System/360 a fost lansat în 1964, un computer principal compatibil cu o gamă largă de software și echipamente periferice. Acesta a devenit un standard în industrie și a permis o mai mare flexibilitate în utilizarea calculatoarelor în diverse domenii.</p>
+      </div>
+      <div id="y1971">
+        <h2>1971</h2>
+        <p>Intel 4004, lansat în 1971, a fost primul microprocesor. Acesta a permis miniaturizarea calculatoarelor și a făcut posibilă crearea de dispozitive portabile precum calculatoarele personale.</p>
+      </div>
+      <div id="y1981">
+        <h2>1981</h2>
+        <p>IBM Personal Computer (PC) a fost lansat în 1981, facând calculatoarele mai accesibile publicului larg. Acesta a devenit standardul în industria PC-urilor și a încurajat o creștere a utilizării calculatoarelor în afaceri și în viața de zi cu zi.</p>
+      </div>
+    </div>
+
     <div id="components-page">
       <h1>COMPONENTE</h1>
     </div>

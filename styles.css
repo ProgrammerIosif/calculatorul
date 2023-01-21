@@ -4,7 +4,9 @@
 
 body{
   margin: 0;
-  height: 100vh;
+  /* background-image: url('https://wallpapertag.com/wallpaper/full/b/9/6/350851-download-free-website-background-1920x1080-for-mobile-hd.jpg'); */
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #container{
@@ -20,12 +22,12 @@ body{
 
 h1{
   position: sticky;
-  top: 100px;
-  margin: 46vh 0;
+  top: 50px;
+  margin: 45vh 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 ul{
@@ -41,20 +43,22 @@ li{
 }
 
 button{
+  opacity: 0.7;
   height: 70px;
   font-size: 2rem;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 5px 5px 20px 2px lightblue;
 }
 
-img{
+.section-image{
   opacity: 0;
   height: 400px;
   width: 400px;
   transition: opacity 1s ease;
   border-radius: 20px;
-  box-shadow: 10px 10px 5px 2px lightblue;
+  box-shadow: 5px 5px 50px 2px lightblue;
 }
 
 li:hover > img{
@@ -72,3 +76,55 @@ li:not(hover) > button{
   transform: translateY(0px);
   transition: 0.5s;
 }
+
+
+/* HISTORY PAGE */
+
+
+#history-page{
+  height: 120vh;
+}
+
+#history-container{
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#history-content{
+}
+
+
+
+
+#history-page img{
+  height: 500px;
+  width: 500px;
+}
+
+#range-container{
+  height: 60px;
+  padding: 20px;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#buttons-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px;
+  padding-top: 0;
+}
+
+#history-page button{
+  height: 30px;
+}
+
+input[type="range"] {
+  width: 1300px;
+
