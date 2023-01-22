@@ -1,18 +1,17 @@
 const container = document.querySelector('#container');
 
-const historySectionNumbers = [1822, 1890, 1940, 1946, 1951, 1964, 1971, 1981];
+const historySectionNumbers = [1642, 1822, 1888, 1940, 1946, 1951, 1976];
 var historyIndex = 0;
 var ele;
 var historyContent;
 const historySections = {
+  1642 : document.querySelector('#y1642'),
   1822 : document.querySelector('#y1822'),
-  1890 : document.querySelector('#y1890'),
+  1888 : document.querySelector('#y1888'),
   1940 : document.querySelector('#y1940'),
   1946 : document.querySelector('#y1946'),
-  1951 : document.querySelector('#y1051'),
-  1964 : document.querySelector('#y1064'),
-  1971 : document.querySelector('#y1971'),
-  1981 : document.querySelector('#y1981'),
+  1951 : document.querySelector('#y1951'),
+  1976 : document.querySelector('#y1976'),
 }
 const pages = {
   homePage : document.querySelector('#home-page'),
@@ -42,10 +41,10 @@ const buildNewPage = () => {
       useButtons();
       return;
     case currPage === 'historyPage':
-      historyContent = document.querySelector('#history-content');
-      historyContent.innerHTML = historySections[1822].innerHTML; 
+      historyContent = document.querySelector('#history-image-container');
+      historyContent.innerHTML = historySections[historySectionNumbers[0]].innerHTML; 
       ele = document.querySelector('#slider')
-      ele.value = 1822;
+      ele.value = historySectionNumbers[0];
     case currPage === 'componentsPage':
     case currPage === 'futuresPage':
   }
@@ -61,7 +60,8 @@ const updateHistorySection = () => {
   const value = historySectionNumbers[historyIndex];
   ele.value = value;
   document.querySelector('#current-year').innerHTML = value;
-  historyContent.innerHTML = historySections[value].innerHTML; 
+  historyContent.innerHTML = '';
+  historyContent.innerHTML = historySections[value].innerHTML;
 }
 
 function a() {
