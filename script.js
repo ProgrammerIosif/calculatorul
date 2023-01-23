@@ -20,8 +20,21 @@ const historySections = {
 }
 
 const components = document.querySelectorAll('.component');
+componentsList = document.querySelector('#components-list');
+for(comp of components){
+  const icon = comp.children[0];
+  componentsList.appendChild(icon);
+  const parent = comp
+  icon.addEventListener('click', () => {
+      for(compIcon of componentsList.children)
+        compIcon.classList.remove('shown');
+      icon.classList.add('shown');
+      showComponent(parent); 
+    });
+}
 var componentsContainer;
 var componentsList;
+var shownComponent;
 
 const pages = {
   homePage : document.querySelector('#home-page'),
@@ -38,6 +51,12 @@ const useButtons = () => {
         buildNewPage();
       });
   });
+}
+
+const showComponent = (comp) => {
+  shownComponent = document.querySelector('#shown-component');
+  shownComponent.innerHTML = '';
+  shownComponent.appendChild(comp);
 }
 
 
@@ -62,9 +81,7 @@ const buildNewPage = () => {
       ele.value = historySectionNumbers[0];
     case currPage === 'componentsPage':
       componentsContainer = document.querySelector('#components-container');
-      componentsList = document.querySelector('#components-list');
-      for(comp of components)
-        componentsList.appendChild(comp);
+      
     case currPage === 'futuresPage':
   }
   homePagePos = 2000;
