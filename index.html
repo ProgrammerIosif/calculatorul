@@ -36,14 +36,14 @@
       <h1>ISTORIE</h1>
       <div id="history-container">
         <div id="history-content">
-          <p>Istoria calculatoarelor începe în secolul al XVII-lea cu inventarea calculatoarelor mecanice, cum ar fi Pascaline de către Blaise Pascal, care putea efectua calcule aritmetice simple. În secolul al XIX-lea, Charles Babbage a proiectat Analytical Engine, un calculator mecanic cu scop general si a introdus conceptul de programare. În anii 1900, calculatoarele mecanice au continuat sa evolueze, indeplinind sarcini mai complexe: Mașina de tabulare Hollerith, utilizată în recensământul Statelor Unite, a accelerat procesarea datelor. În secolul al XX-lea, s-a realizat tranzitia la calculatoare electrice cum ar fi Atanasoff-Berry Computer (ABC) și Electronic Numerical Integrator And Computer (ENIAC), primul calculator electronic cu scop general. În anii 1950 și 1960, au apărut primele calculatoare comerciale, cum ar fi UNIVAC I. În această perioadă, s-au dezvoltat și primele calculatoare personale, precum Apple I, lansat în 1976.</p>
+          <p>Istoria calculatoarelor începe în secolul al XVII-lea cu inventarea calculatoarelor mecanice, cum ar fi Pascaline de către Blaise Pascal, care putea efectua calcule aritmetice simple. În secolul al XIX-lea, Charles Babbage a proiectat Analytical Engine, un calculator mecanic cu scop general si a introdus conceptul de programare. În anii 1900, calculatoarele mecanice au continuat sa evolueze, indeplinind sarcini mai complexe: Mașina de tabulare Hollerith, utilizată în recensământul Statelor Unite, a accelerat procesarea datelor. În secolul al XX-lea, s-a realizat tranzitia la calculatoare electrice cum ar fi Atanasoff-Berry Computer (ABC) și Electronic Numerical Integrator And Computer (ENIAC), primul calculator electronic cu scop general. În anii 1950 și 1960, au apărut primele calculatoare comerciale, cum ar fi UNIVAC I. În această perioadă, s-au dezvoltat și primele calculatoare personale, precum IBM PC, lansat în 1981.</p>
           <div id="history-image-container"></div>
         </div>
         <div id="year-nav-container">
           <div id="range-container">
             <div>1600</div>
             <input type="range" min="1600" max="2000" value="1822" id="slider" onchange="a()">
-            <div>2020</div>
+            <div>2000 </div>
           </div>
           <div id="buttons-container">
             <button id="left" onclick="left()"><</button>
@@ -53,9 +53,10 @@
         </div>
       </div>
     </div>
-    
-    
-    
+
+    <button id="corner-back-button">
+        ←
+    </button>
 
     <!-- history page sections -->
     <div class="hidden" id="history-sections">
@@ -85,11 +86,49 @@
       </div>
       <div id="y1976">
         <h2>APPLE I</h2>
-        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-EQiF-EGMlgk%2FUwfY1fxx1pI%2FAAAAAAAAcXU%2Fyhr-jB5OOfo%2Fs1600%2FOld%2BComputer.jpg&f=1&nofb=1&ipt=82bd14a1f4c0169966188a8a9aeb65a7f602d10d8083ee09f3de5a1d17955fc8&ipo=images" alt="">
+        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.computerhistory.org%2Frevonline%2Fimages%2F102716228p-03-01.jpg%3Fw%3D600&f=1&nofb=1&ipt=d9ee6b30c5eab9bbee734cd9fa3b519c7e9c38c8902fe635ac7e2b2433b04b2f&ipo=images" alt="">
       </div>
     </div>
     <div id="components-page">
       <h1>COMPONENTE</h1>
+      <div id="components-container">
+        <div id="components-list"></div>
+
+      </div>
+    </div>
+
+    <div id="components-list">
+      <div id="processor" class="component">
+        <img src="https://cdn-icons-png.flaticon.com/512/908/908535.png" alt="" id="icon">
+      </div>
+      <div id="motherboard" class="component">
+        <img src="https://cdn-icons-png.flaticon.com/512/908/908540.png" alt="">
+      </div>
+      <div id="memory" class="component">
+        <img src="https://cdn-icons-png.flaticon.com/512/908/908522.png" alt="">
+      </div>
+      <div id="storage" class="component">
+        <img src="https://cdn-icons-png.flaticon.com/512/908/908521.png" alt="">
+      </div>
+      <div id="psu" class="component">
+        <img src="https://cdn-icons-png.flaticon.com/512/908/908526.png" alt="">
+      </div>
+      <div id="gpu" class="component">
+        <!-- <img src="https://cdn-icons-png.flaticon.com/512/8900/8900415.png" alt=""> -->
+        <img src="https://cdn-icons-png.flaticon.com/512/1470/1470162.png" alt="">
+      </div>
+      <div id="cooling" class="component">
+        <img src="https://cdn-icons-png.flaticon.com/512/4617/4617749.png" alt="">
+      </div>
+      <div id="case" class="component">
+        <img src="https://cdn-icons-png.flaticon.com/512/908/908593.png" alt="">
+      </div>
+      <div id="input" class="component">
+        <img src="https://cdn-icons-png.flaticon.com/512/4011/4011563.png" alt="">
+      </div>
+      <div id="output" class="component">
+        <img src="https://cdn-icons-png.flaticon.com/512/6256/6256704.png" alt="">
+      </div>
     </div>
     <div id="future-page">
       <h1>VIITOR</h1>

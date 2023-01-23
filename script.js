@@ -1,4 +1,9 @@
 const container = document.querySelector('#container');
+const backButton = document.querySelector('#corner-back-button');
+backButton.addEventListener('click', () => {
+  currPage = 'homePage';
+  buildNewPage();
+});
 
 const historySectionNumbers = [1642, 1822, 1888, 1940, 1946, 1951, 1976];
 var historyIndex = 0;
@@ -13,6 +18,11 @@ const historySections = {
   1951 : document.querySelector('#y1951'),
   1976 : document.querySelector('#y1976'),
 }
+
+const components = document.querySelectorAll('.component');
+var componentsContainer;
+var componentsList;
+
 const pages = {
   homePage : document.querySelector('#home-page'),
   historyPage : document.querySelector('#history-page'),
@@ -34,7 +44,12 @@ const useButtons = () => {
 const buildNewPage = () => {
   container.innerHTML = '';
   container.appendChild(pages[currPage]);
-  window.scrollTo(0, 0);
+  if(currPage !== 'homePage'){
+    container.appendChild(backButton);
+    window.scrollTo(0, 0);
+  }
+  else
+    window.scrollTo(0, homePagePos);
   
   switch (true) {
     case currPage === 'homePage':
@@ -46,12 +61,18 @@ const buildNewPage = () => {
       ele = document.querySelector('#slider')
       ele.value = historySectionNumbers[0];
     case currPage === 'componentsPage':
+      componentsContainer = document.querySelector('#components-container');
+      componentsList = document.querySelector('#components-list');
+      for(comp of components)
+        componentsList.appendChild(comp);
     case currPage === 'futuresPage':
   }
+  homePagePos = 2000;
   
 }
 
-let currPage = 'homePage';
+let currPage = 'componentsPage';
+let homePagePos = 0;
 buildNewPage();
 
 
