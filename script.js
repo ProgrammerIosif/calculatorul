@@ -5,7 +5,7 @@ backButton.addEventListener('click', () => {
   buildNewPage();
 });
 
-const historySectionNumbers = [1642, 1822, 1888, 1940, 1946, 1951, 1976];
+const historySectionNumbers = [1642, 1822, 1888, 1940, 1946, 1951, 1981];
 var historyIndex = 0;
 var ele;
 var historyContent;
@@ -16,7 +16,7 @@ const historySections = {
   1940 : document.querySelector('#y1940'),
   1946 : document.querySelector('#y1946'),
   1951 : document.querySelector('#y1951'),
-  1976 : document.querySelector('#y1976'),
+  1981 : document.querySelector('#y1981'),
 }
 
 const components = document.querySelectorAll('.component');
@@ -88,7 +88,7 @@ const buildNewPage = () => {
   
 }
 
-let currPage = 'componentsPage';
+let currPage = 'homePage';
 let homePagePos = 0;
 buildNewPage();
 

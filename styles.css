@@ -6,10 +6,6 @@ body{
   margin: 0;
 }
 
-#container{
-
-}
-
 #corner-back-button{
   position: absolute;
   top: 175vh;
@@ -99,7 +95,7 @@ li:not(hover) > button{
 
 
 #history-page{
-  height: 145vh;
+  height: 147vh;
 }
 
 #history-container{
@@ -126,13 +122,13 @@ li:not(hover) > button{
 }
 
 #history-page img{
-  height: 500px;
-  width: 500px;
+  height: 50vh;
+  width: 50vh;
 }
 
 #range-container{
   height: 60px;
-  padding: 20px;
+  padding: 20px 15vw;
   padding-bottom: 0;
   display: flex;
   align-items: center;
@@ -152,12 +148,17 @@ li:not(hover) > button{
   height: 30px;
 }
 
+#year-nav-container p {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
 input[type="range"] {
   width: 1300px;
 }
 
 #current-year {
-  font-size: 1.4rem;  
+  font-size: 1.7rem;  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,7 +172,7 @@ input[type="range"] {
 
 
 #components-container{
-  height: 80vh;
+  height: 77vh;
   position: absolute;
   bottom: -85vh;
   left:0;
@@ -209,9 +210,10 @@ input[type="range"] {
     100% { transform: translateY(-20px); }
 }
 
+
 #shown-component > *{
   display: flex;
-  padding: 5vh 15vw 0 15vw;
+  padding: 8vh 15vw 0 15vw;
   gap: 100px;
 }
 
@@ -220,11 +222,66 @@ input[type="range"] {
 }
 
 .component-cover{
-  height: 500px;
-  width: 700px;
+  height: 40vh;
+  width: 35vw;
 
 }
 
+@media screen and (max-width: 1500px){
+
+  /* home-page */
+
+  /* history-page */
+
+  #history-content p{
+    font-size: 1.2rem;
+  }
+
+
+  /* components-page */
+
+  h1{
+    position: sticky;
+    top: 50px;
+    margin: 42vh 0 46vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+  }
+  .component-icon{
+    width: 80px;
+    height: 80px;
+  }
+
+}
+
+@media screen and (max-height: 900px){
+
+  /* home-page */
+
+  .section-image {
+    width: 350px; 
+    height: 350px;
+  }
+
+  li:hover > button{
+    transform: translateY(450px);
+    transition: 0.5s;
+  }
+
+  /* history-page */
+  
+  #history-content p{
+    font-size: 1.1rem;
+  }
+
+  /* components-page */
+
+  #shown-component p{
+    font-size: 1.6rem;
+  } 
+}
 
 /* background effect  */
 
