@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="styles.css">
   <title>Calculatorul</title>
   <script src="script.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
 </head>
 <body>
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
@@ -16,7 +19,7 @@
   <div id="container">
     <div id="home-page">
       <h1>CALCULATORUL</h1>
-      <ul>
+      <ul class="main-page-ul">
         <li>
           <button class="" id="history">Istorie</button>
           <img class="section-image" id="history" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-EQiF-EGMlgk%2FUwfY1fxx1pI%2FAAAAAAAAcXU%2Fyhr-jB5OOfo%2Fs1600%2FOld%2BComputer.jpg&f=1&nofb=1&ipt=82bd14a1f4c0169966188a8a9aeb65a7f602d10d8083ee09f3de5a1d17955fc8&ipo=images" alt="">
@@ -35,20 +38,89 @@
     <div id="history-page">
       <h1>ISTORIE</h1>
       <div id="history-container">
-        <div id="history-content">
-          <p>Istoria calculatoarelor începe în secolul al XVII-lea cu inventarea calculatoarelor mecanice, cum ar fi Pascaline de către Blaise Pascal, care putea efectua calcule aritmetice simple. În secolul al XIX-lea, Charles Babbage a proiectat Analytical Engine, un calculator mecanic cu scop general si a introdus conceptul de programare. În anii 1900, calculatoarele mecanice au continuat sa evolueze, indeplinind sarcini mai complexe: Mașina de tabulare Hollerith, utilizată în recensământul Statelor Unite, a accelerat procesarea datelor. În secolul al XX-lea, s-a realizat tranzitia la calculatoare electrice cum ar fi Atanasoff-Berry Computer (ABC) și Electronic Numerical Integrator And Computer (ENIAC), primul calculator electronic cu scop general. În anii 1950 și 1960, au apărut primele calculatoare comerciale, cum ar fi UNIVAC I. În această perioadă, s-au dezvoltat și primele calculatoare personale, precum IBM PC, lansat în 1981.</p>
-          <div id="history-image-container"></div>
-        </div>
-        <div id="year-nav-container">
-          <div id="range-container">
-            <p>1600</p>
-            <input type="range" min="1600" max="2000" value="1822" id="slider" onchange="a()">
-            <p>2000 </p>
-          </div>
-          <div id="buttons-container">
-            <button id="left" onclick="left()"><</button>
-            <div id="current-year">1822</div>
-            <button id="right" onclick="right()">></button>
+        <div class="container">
+          <div class="swiper-container-wrapper swiper-container-wrapper--timeline">
+            <!-- Swiper -->
+            <div class="swiper swiper-container swiper-container--timeline">
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <span class="title">
+                    <img src="https://p1.liveauctioneers.com/364/40452/17377272_6_l.jpg" alt="">
+                  </span>
+                  <div class="title">
+                    <h2>Pascaline</h2>
+                    <p>Pascaline a fost una dintre primele mașini de calcul mecanice inventate de Blaise Pascal în 1642. Aceasta putea efectua operații aritmetice simple, cum ar fi adunarea și scăderea.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="title">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.britannica.com%2F31%2F172531-050-E009D42C%2Fportion-Charles-Babbage-Analytical-Engine-death-mill-1871.jpg&f=1&nofb=1&ipt=f91da7df5c87c0dc8e8d480910dbb7b339da5bbb0b0855a1350adbf4981a10cb&ipo=images" alt="">
+                  </span>
+                  <div class="title">
+                    <h2>Analytical Engine</h2>
+                    <p>Mașina analitică a fost o mașină de calcul proiectată de Charles Babbage în secolul al XIX-lea. Aceasta ar fi putut efectua calcule complexe și ar fi avut o memorie programabilă. Cu toate acestea, mașina nu a fost niciodată finalizată.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="title">
+                    <img src="https://i.pinimg.com/736x/07/a4/eb/07a4eb6e6f189b270eabd026998d86ce--card-reader-information-technology.jpg" alt="">
+                  </span>
+                  <div class="title">
+                    <h2>Masina de tabulare Holerith</h2>
+                    <p>Mașina analitică a fost o mașină de calcul proiectată de Charles Babbage în secolul al XIX-lea. Aceasta ar fi putut efectua calcule complexe și ar fi avut o memorie programabilă. Cu toate acestea, mașina nu a fost niciodată finalizată.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="title">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fs3.timetoast.com%2Fpublic%2Fuploads%2Fphotos%2F7000355%2Fasd.jpg&f=1&nofb=1&ipt=d195aea9f310c92dbd8ee8b76ac4af408382e2e81b2af7d210bc4a613404d640&ipo=images" alt="">
+                  </span>
+                  <div class="title">
+                    <h2>Atanasoff-Berry Computer</h2>
+                    <p>Mașina analitică a fost o mașină de calcul proiectată de Charles Babbage în secolul al XIX-lea. Aceasta ar fi putut efectua calcule complexe și ar fi avut o memorie programabilă. Cu toate acestea, mașina nu a fost niciodată finalizată.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="title">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-OP9T9mDVoKM%2FUrSLp-LILrI%2FAAAAAAAAAZQ%2FPO_Y1nVRK38%2Fs1600%2FVacTubeComputer.jpg&f=1&nofb=1&ipt=0d680303e15ab2d02ad9fdd1d81030742da8c49feae3fc9c525a069223769193&ipo=images" alt="">
+                  </span>
+                  <div class="title">
+                    <h2>ENIAC</h2>
+                    <p>Mașina analitică a fost o mașină de calcul proiectată de Charles Babbage în secolul al XIX-lea. Aceasta ar fi putut efectua calcule complexe și ar fi avut o memorie programabilă. Cu toate acestea, mașina nu a fost niciodată finalizată.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="title">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.computerhistory.org%2Fblog-media%2FHYGPU-102667576p-03-01.jpg&f=1&nofb=1&ipt=9064c3af8a179efdceacfd784ab914d75e990aa612fba09d72143fdd6c75323a&ipo=images&width=500&h=500" alt="">
+                  </span>
+                  <div class="title">
+                    <h2>UNIVAC I</h2>
+                    <p>Mașina analitică a fost o mașină de calcul proiectată de Charles Babbage în secolul al XIX-lea. Aceasta ar fi putut efectua calcule complexe și ar fi avut o memorie programabilă. Cu toate acestea, mașina nu a fost niciodată finalizată.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="title">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.computerhistory.org%2Frevonline%2Fimages%2F102716228p-03-01.jpg%3Fw%3D600&f=1&nofb=1&ipt=d9ee6b30c5eab9bbee734cd9fa3b519c7e9c38c8902fe635ac7e2b2433b04b2f&ipo=images" alt="">
+                  </span>
+                  <div class="title">
+                    <h2>IBM PC</h2>
+                    <p>Mașina analitică a fost o mașină de calcul proiectată de Charles Babbage în secolul al XIX-lea. Aceasta ar fi putut efectua calcule complexe și ar fi avut o memorie programabilă. Cu toate acestea, mașina nu a fost niciodată finalizată.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Timeline -->
+            <ul class="swiper-pagination-custom">
+              <li class='swiper-pagination-switch first active'><span class='switch-title'>1642</span></li>
+              <li class='swiper-pagination-switch'><span class='switch-title'>1822</span></li>
+              <li class='swiper-pagination-switch'><span class='switch-title'>1888</span></li>
+              <li class='swiper-pagination-switch'><span class='switch-title'>1940</span></li>
+              <li class='swiper-pagination-switch'><span class='switch-title'>1946</span></li>
+              <li class='swiper-pagination-switch'><span class='switch-title'>1951</span></li>
+              <li class='swiper-pagination-switch last'><span class='switch-title'>1981</span></li>
+            </ul>
+            <!-- Progressbar -->
+            <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal"></div>
           </div>
         </div>
       </div>
@@ -59,7 +131,7 @@
     </button>
 
     <!-- history page sections -->
-    <div class="hidden" id="history-sections">
+    <!-- <div class="hidden" id="history-sections">
       <div id="y1642">
         <h2>Pascaline</h2>
         <img src="https://p1.liveauctioneers.com/364/40452/17377272_6_l.jpg" alt="">
@@ -72,6 +144,7 @@
         <h2>Masina de tabulare Holerith</h2>
         <img src="https://i.pinimg.com/736x/07/a4/eb/07a4eb6e6f189b270eabd026998d86ce--card-reader-information-technology.jpg" alt="">
       </div>
+      paccaline,analytical engine, masina de tabulare holerith, atanasoff-berry computer, eniax, univac 1, ibm pc
       <div id="y1940">
         <h2>Atanasoff-Berry Computer</h2>
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fs3.timetoast.com%2Fpublic%2Fuploads%2Fphotos%2F7000355%2Fasd.jpg&f=1&nofb=1&ipt=d195aea9f310c92dbd8ee8b76ac4af408382e2e81b2af7d210bc4a613404d640&ipo=images" alt="">
@@ -88,7 +161,7 @@
         <h2>IBM PC</h2>
         <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.computerhistory.org%2Frevonline%2Fimages%2F102716228p-03-01.jpg%3Fw%3D600&f=1&nofb=1&ipt=d9ee6b30c5eab9bbee734cd9fa3b519c7e9c38c8902fe635ac7e2b2433b04b2f&ipo=images" alt="">
       </div>
-    </div>
+    </div> -->
     <div id="components-page">
       <h1>COMPONENTE</h1>
       <div id="components-container">

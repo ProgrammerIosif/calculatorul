@@ -5,20 +5,6 @@ backButton.addEventListener('click', () => {
   buildNewPage();
 });
 
-const historySectionNumbers = [1642, 1822, 1888, 1940, 1946, 1951, 1981];
-var historyIndex = 0;
-var ele;
-var historyContent;
-const historySections = {
-  1642 : document.querySelector('#y1642'),
-  1822 : document.querySelector('#y1822'),
-  1888 : document.querySelector('#y1888'),
-  1940 : document.querySelector('#y1940'),
-  1946 : document.querySelector('#y1946'),
-  1951 : document.querySelector('#y1951'),
-  1981 : document.querySelector('#y1981'),
-}
-
 const components = document.querySelectorAll('.component');
 componentsList = document.querySelector('#components-list');
 for(comp of components){
@@ -75,10 +61,7 @@ const buildNewPage = () => {
       useButtons();
       return;
     case currPage === 'historyPage':
-      historyContent = document.querySelector('#history-image-container');
-      historyContent.innerHTML = historySections[historySectionNumbers[0]].innerHTML; 
-      ele = document.querySelector('#slider')
-      ele.value = historySectionNumbers[0];
+      timeline();
     case currPage === 'componentsPage':
       componentsContainer = document.querySelector('#components-container');
       
@@ -93,32 +76,38 @@ let homePagePos = 0;
 buildNewPage();
 
 
-
-const updateHistorySection = () => {
-  const value = historySectionNumbers[historyIndex];
-  ele.value = value;
-  document.querySelector('#current-year').innerHTML = value;
-  historyContent.innerHTML = '';
-  historyContent.innerHTML = historySections[value].innerHTML;
-}
-
-function a() {
-  var value = ele.value
-  if(value > historySectionNumbers[historyIndex] && i < historySectionNumbers.length -1)
-    i++;
-  else if(value < historySectionNumbers[historyIndex] && i > 0)
-    i--;
-  updateHistorySection();
-}
-
-function left() {
-  if(historyIndex > 0)
-    historyIndex--;
-  updateHistorySection();
-}
-
-function right() {
-  if(historyIndex < historySectionNumbers.length - 1)
-    historyIndex++;
-  updateHistorySection();
+const timeline = () => {
+  $(document).ready(function () {
+    var mySwiper = new Swiper(".swiper", {
+      autoHeight: true,
+      speed: 500,
+      direction: "horizontal",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar"
+      },
+      loop: false,
+      effect: "slide",
+      spaceBetween: 30,
+      on: {
+        init: function () {
+          $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+          $(".swiper-pagination-custom .swiper-pagination-switch").eq(0).addClass("active");
+        },
+        slideChangeTransitionStart: function () {
+          $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+          $(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
+        }
+      }
+    });
+    $(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
+      mySwiper.slideTo($(this).index());
+      $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+      $(this).addClass("active");
+    });
+  });
 }
