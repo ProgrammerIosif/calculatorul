@@ -22,6 +22,7 @@ var componentsContainer;
 var componentsList;
 var shownComponent;
 
+
 const pages = {
   homePage : document.querySelector('#home-page'),
   historyPage : document.querySelector('#history-page'),
@@ -64,17 +65,11 @@ const buildNewPage = () => {
       timeline();
     case currPage === 'componentsPage':
       componentsContainer = document.querySelector('#components-container');
-      
-    case currPage === 'futuresPage':
+    case currPage === 'futurePage':
+      timeline();
   }
   homePagePos = 2000;
-  
 }
-
-let currPage = 'homePage';
-let homePagePos = 0;
-buildNewPage();
-
 
 const timeline = () => {
   $(document).ready(function () {
@@ -111,3 +106,7 @@ const timeline = () => {
     });
   });
 }
+
+let currPage = 'homePage';
+let homePagePos = 0;
+buildNewPage();
