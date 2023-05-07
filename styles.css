@@ -109,8 +109,6 @@ li:not(hover) > button{
 /* HISTORY PAGE */
 
 
-#history-page{
-}
 
 #history-container{
   width: 100%;
@@ -177,12 +175,24 @@ li:not(hover) > button{
 
 #shown-component > *{
   display: flex;
-  padding: 8vh 15vw 0 15vw;
+  padding: 8vh 10vw 0 10vw;
   gap: 100px;
 }
 
-#shown-component p {
+#shown-component .component div{
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+}
+
+#shown-component ul {
+  margin: 0;
+}
+
+#shown-component p,
+#shown-component li {
   font-size: 2rem;
+  margin: 0;
 }
 
 .component-cover{
@@ -203,7 +213,7 @@ li:not(hover) > button{
 }
 
 #future-container {
-  height: 90vh;
+  height: 85vh;
   padding-top:10vw;
 }
 
@@ -232,9 +242,6 @@ li:not(hover) > button{
   height: min(35vh,21vw);
   margin: 0 1vw;
 }
-
-
-
 
 @media screen and (max-width: 1500px){
 
@@ -283,7 +290,8 @@ li:not(hover) > button{
     gap: 50px;
   }
 
-  #shown-component p {
+  #shown-component p,
+  #shown-component li{
     font-size: 1.5rem;
   }
 
@@ -298,6 +306,10 @@ li:not(hover) > button{
     height: 80vh;
     display: flex;
     align-items: center;
+  }
+
+  #future-page h2{
+    font-size: 2.3;
   }
 
   #future-page p,
@@ -369,8 +381,13 @@ li:not(hover) > button{
     gap: 50px;
   }
 
-  #shown-component p {
-    font-size: 1.2rem;
+  #shown-component ul{
+    padding-left: 20px;
+  }
+
+  #shown-component p,
+  #shown-component li {
+    font-size: 1.1rem;
   }
 
   .shown{
@@ -390,6 +407,10 @@ li:not(hover) > button{
   #future-page li {
     font-size: 1rem;
     margin: 0;
+  }
+
+  #future-page h2{
+    font-size: 1.5rem;
   }
 
   #future-page h2,
