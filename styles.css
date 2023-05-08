@@ -35,11 +35,16 @@ body{
 
 /* HOME PAGE */
 
+#author{
+  text-align: center;
+  margin: 30vh 0 -40vh 0;
+  font-size:1.6rem;
+}
 
 h1{
   position: sticky;
   top: 50px;
-  margin: 42vh 0 46vh 0;
+  margin: 43vh 0 46vh 0;
   display: flex;
   align-items: center;
   justify-content: center;
